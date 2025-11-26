@@ -5,6 +5,7 @@
 - I do not provide automated tests for projects. You will need to determine yourself whether the code meets the requirements provided in the rubric. It is important for you to be able to determine whether a program you write meets requirements (in the real world there won't be pre-written tests to tell you if you did your job right).
 #### Overview
 - For this project, assume a local hair salon, Incredible Cuts, asked your team to create an app prototype for them. Up until now, they've just been recording their business data manually. They provided you a sample of that data in the `starting_hair_salon_data.xlsx` file. They want you to create a tool that lets their customers check in, as well as give managers access to important data.
+- [Click here](https://www.youtube.com/watch?v=amOjyOzAcgI) for a video of me running through the logic of the program.
 - This project is split up into 4 parts in 4 different files:
     - **Part 1: Create a database and classes with peewee**
         - Use the `p03_1_db_classes.py` file
@@ -216,8 +217,8 @@ At the end of all this, you should have a Customer table with 368 rows, a Stylis
 
 
 ## Part 3: Check In Process
-- The point of this module is to simulate the check in process for a customer as a they walk in to the hair salon. Customers will enter in their phone number to check in. If the phone number is in the database, they are recognized as a returning customer and can choose to use their previously stored data. Otherwise, they are a new customer and more info will be gathered about them.
-- You can see the `check_in_process.pdf` file for an overview of the logical flow of this module. I recommend looking over it. It doesn't show every detail of each printed message & input message, but it shows the general logic of when you should be asking for information, when to create new customers, when to ask for hair styles/stylist preferences, etc.
+- The point of this module is to simulate the check in process for a customer walking in to the hair salon. Customers will enter in their phone number to check in. If the phone number is already in the database, they are recognized as a returning customer and can choose to use their previously stored data. Otherwise, they are a new customer and more info will be gathered about them.
+- You can watch [this video](https://www.youtube.com/watch?v=amOjyOzAcgI) going over this part of the project if you haven't already, or you can also check out the `check_in_process.pdf` file in this repository for an overview of the logical flow of this module if you're a fan of process models.
 - Write all your code for part 3 in the `p03_3_check_in.py` module.
 - This module should import the `Customer`, `Stylist`, `Appointment` classes you made in your `p3_db_classes.py` module:
     - `from p03_solution_1_db_classes import Customer, Stylist, Appointment`
