@@ -8,6 +8,8 @@ test_cases_table_output.html
 test_cases_drafts.json
 markdown_generated.md
 hair_salon.db
+exporting.py
+seed_data.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
