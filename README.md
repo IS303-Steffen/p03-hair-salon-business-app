@@ -68,17 +68,18 @@
     - This way, if you ever need to make a change to your database (like if you misspelled a column name or something) you can just rerun this file and it will start the database from scratch.
     - the `if __name__` portion of the code is telling python to only run the `start_from_scratch()` function if you are starting python from this file specifically. Feel free to look it up how `__name__` works if you're curious.
 ```
-def start_from_scratch(db):
+# This assumes you called your peewee sqlite database connection variable "db"
+def start_from_scratch(db_to_restart = db):
     """
     Drops specified tables ('appointment', 'stylist', 'customer') in the SQLite database if they exist, then recreates them.
     """
-    db.connect() # connect to the SQLite database global variable
+    db_to_restart.connect() # connect to the SQLite database global variable
     tables_to_drop = ['appointment', 'stylist', 'customer']
-    with db.atomic():
+    with db_to_restart.atomic():
         for table in tables_to_drop:
             db.execute_sql(f"DROP TABLE IF EXISTS {table};")
-    db.create_tables([Customer, Stylist, Appointment]) # creates the tables for the classes
-    db.close()
+    db_to_restart.create_tables([Customer, Stylist, Appointment]) # creates the tables for the classes written if they don't exist.
+    db_to_restart.close()
     print("Recreated database structure from scratch")
 
 if __name__ == '__main__':
