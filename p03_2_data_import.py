@@ -1,5 +1,4 @@
-from p03_1_db_classes import start_from_scratch, initialize_database
-# now when you run this file, each time you are starting from
-# scratch
-start_from_scratch()
-db = initialize_database()
+# 1. import everything you need
+import pandas as pd
+import sqlite3
+from p03_solution_1_db_classes import start_from_scratch
