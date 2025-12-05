@@ -116,7 +116,7 @@ combined_df['c_phone_number'] = combined_df['c_phone_number'].str.replace('-', '
 ```
 
 #### 4. Normalize the data
-In database terminology, "normalizing" means separating out data into seaparate tables (and sometimes separate columns). Here, we need to have separate Customer, Stylist, and Appointment data, so we should first create 3 different dataframes.
+In database terminology, "normalizing" means separating out data into separate tables (and sometimes separate columns). Here, we need to have separate Customer, Stylist, and Appointment data, so we should first create 3 different dataframes.
 ```
 # 4. Normalize the data: Separate out the customer and stylist data to their own dataframes.
 # 4.1 Customer and stylist data is duplicated multiple times in the original Excel file. Having one row per customer and stylist is more efficient.
@@ -132,7 +132,7 @@ s_df['s_id'] = s_df.index
 ```
 
 #### 5. Add foreign keys to Appointment
-Now, instead of of storing customer or stylist data in the same table of appointments, we will instead store a "foreign key" or a reference to one of the primary keys in the customer or stylist table.
+Now, instead of of storing customer or stylist data in the same table as appointments, we will instead store a "foreign key" or a reference to one of the primary keys in the customer or stylist table.
 - The reason to do this is that instead of repeating customer/stylist data over an over again, we just store a reference to the table holding the data where it is only stored once.
 - For example if "Bob" gets a haircut 50 times at our salon, without foreign keys, we would need to store his name, phone number, etc in 50 separate rows. Now, we can store Bob once in the Customer table, and just reference his primary key in the Appointment table as a foreign key as many times as we want. Much more efficient, and less prone to data errors in the long run!
 - You'll learn more about this if you take a database class.
