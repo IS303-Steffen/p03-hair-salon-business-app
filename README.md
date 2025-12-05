@@ -214,7 +214,7 @@ a_df.to_sql('appointment', db, if_exists='append', index=False)
 print("Exported cleaned and separated data to SQLite database")
 ```
 
-At the end of all this, you should have a Customer table with 368 rows, a Stylist table with 9 rows, and an Appointment table with 1000 rows.
+At the end of all this, you should have a Customer table with 368 rows, a Stylist table with 10 rows, and an Appointment table with 1000 rows.
 
 
 ## Part 3: Check In Process
