@@ -22,6 +22,7 @@
 - Part 1 should be done before the others, and it will be easier to do part 3 & 4 if part 2 is done first, but you could work on parts 2, 3, and 4 simultaneously if you want to split work up among group members.
 
 ## Libraries Required:
+- If you are using a virtual environment, you can use `pip install -r requirements.txt` to install all necessary external libraries.
 - Part 1:
     - `peewee`
 - Part 2:
